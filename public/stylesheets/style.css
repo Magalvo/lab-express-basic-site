@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Changa+One&display=swap');
+
+* {
+  font-family: 'Changa One', cursive;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0 !important;
+  padding: 0 !important;
+  overflow: hidden;
+}
+
+a {
+  border-radius: 60px;
+  text-decoration: none;
+  font: bold 20px Arial;
+  text-decoration: none;
+  background-color: #eeeeee;
+  color: #333333;
+  padding: 4px 12px 4px 12px;
+  border-top: 1px solid #cccccc;
+  border-right: 1px solid #333333;
+  border-bottom: 1px solid #333333;
+  border-left: 1px solid #cccccc;
+}
+
+a:hover {
+  border: 1px solid black;
+  color: white;
+  background-color: #24d7d4;
+}
+
+h1,
+h2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
+}
+
+.photo {
+  position: relative;
+}
+
+.photo img {
+  width: 100%;
+  height: auto;
+}
+
+.photo:hover:before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.photo:hover img {
+  opacity: 0.5;
+}
+
+.photo:hover:after {
+  content: 'View';
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 24px;
+  color: #fff;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 80px;
+  background-color: #24d7d4;
+}
+
+article {
+  text-align: justify;
+  margin: 0px 20px;
+}
